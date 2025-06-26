@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autism Detection Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <form method="post" action="/predict">
+
+        <h1>Autism Predictor</h1>
+        <div class="container">
+
+            <div class="content">
+            
+                <div class="as">
+            
+                    <!-- A1 to A10 Scores -->
+                    <label for="A1_Score">A1 Score:</label>
+                    <select name="A1_Score" required>
+                        <option value="" disabled selected>Select</option>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+            
+                    <label for="A2_Score">A2 Score:</label>
+                    <select name="A2_Score" required>
+                        <option value="" disabled selected>Select</option>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+            
+                    <label for="A3_Score">A3 Score:</label>
+                    <select name="A3_Score" required>
+                        <option value="" disabled selected>Select</option>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+            
+                    <label for="A4_Score">A4 Score:</label>
+                    <select name="A4_Score" required>
+                        <option value="" disabled selected>Select</option>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+            
+                    <label for="A5_Score">A5 Score:</label>
+                    <select name="A5_Score" required>
+                        <option value="" disabled selected>Select</option>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+            
+                    <label for="A6_Score">A6 Score:</label>
+                    <select name="A6_Score" required>
+                        <option value="" disabled selected>Select</option>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+            
+                    <label for="A7_Score">A7 Score:</label>
+                    <select name="A7_Score" required>
+                        <option value="" disabled selected>Select</option>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+            
+                    <label for="A8_Score">A8 Score:</label>
+                    <select name="A8_Score" required>
+                        <option value="" disabled selected>Select</option>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+            
+                    <label for="A9_Score">A9 Score:</label>
+                    <select name="A9_Score" required>
+                        <option value="" disabled selected>Select</option>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+            
+                    <label for="A10_Score">A10 Score:</label>
+                    <select name="A10_Score" required>
+                        <option value="" disabled selected>Select</option>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+            
+                </div>
+            
+                <div class="rest">
+                    <!-- Age -->
+                    <label for="age">Age:</label>
+                    <input type="number" name="age" required>
+            
+                    <!-- Gender -->
+                    <label for="gender">Gender:</label>
+                    <select name="gender" required>
+                        <option value="" disabled selected>Select Gender</option>
+                        <option value="m">Male</option>
+                        <option value="f">Female</option>
+                    </select>
+            
+                    <!-- Ethnicity -->
+                    <label for="ethnicity">Ethnicity:</label>
+                    <select name="ethnicity" required>
+                        <option value="" disabled selected>Select Ethnicity</option>
+                        <option value="Asian">Asian</option>
+                        <option value="Black">Black</option>
+                        <option value="Hispanic">Hispanic</option>
+                        <option value="Latino">Latino</option>
+                        <option value="Middle Eastern">Middle Eastern</option>
+                        <option value="Others">Others</option>
+                        <option value="Pasifika">Pasifika</option>
+                        <option value="South Asian">South Asian</option>
+                        <option value="Turkish">Turkish</option>
+                        <option value="White-European">White-European</option>
+                    </select>
+            
+                    <!-- Jaundice -->
+                    <label for="jaundice">Jaundice:</label>
+                    <select name="jaundice" required>
+                        <option value="" disabled selected>Select</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+            
+                    <!-- Country of Residence -->
+                    <label for="contry_of_res">Country of Residence:</label>
+                    <select name="contry_of_res" required>
+                        <option value="" disabled selected>Select Country</option>
+                        <option value="Afghanistan">Afghanistan</option>
+                        <option value="Angola">Angola</option>
+                        <option value="Argentina">Argentina</option>
+                        <option value="Armenia">Armenia</option>
+                        <option value="Aruba">Aruba</option>
+                        <option value="Australia">Australia</option>
+                        <option value="Austria">Austria</option>
+                        <option value="Azerbaijan">Azerbaijan</option>
+                        <option value="Bahamas">Bahamas</option>
+                        <option value="Bangladesh">Bangladesh</option>
+                        <option value="Belgium">Belgium</option>
+                        <option value="Bolivia">Bolivia</option>
+                        <option value="Brazil">Brazil</option>
+                        <option value="Burundi">Burundi</option>
+                        <option value="Canada">Canada</option>
+                        <option value="China">China</option>
+                        <option value="Cyprus">Cyprus</option>
+                        <option value="Czech Republic">Czech Republic</option>
+                        <option value="Egypt">Egypt</option>
+                        <option value="Ethiopia">Ethiopia</option>
+                        <option value="France">France</option>
+                        <option value="Germany">Germany</option>
+                        <option value="Hong Kong">Hong Kong</option>
+                        <option value="India">India</option>
+                        <option value="Iran">Iran</option>
+                        <option value="Iraq">Iraq</option>
+                        <option value="Ireland">Ireland</option>
+                        <option value="Italy">Italy</option>
+                        <option value="Japan">Japan</option>
+                        <option value="Jordan">Jordan</option>
+                        <option value="Kazakhstan">Kazakhstan</option>
+                        <option value="Malaysia">Malaysia</option>
+                        <option value="Mexico">Mexico</option>
+                        <option value="Netherlands">Netherlands</option>
+                        <option value="New Zealand">New Zealand</option>
+                        <option value="Nicaragua">Nicaragua</option>
+                        <option value="Niger">Niger</option>
+                        <option value="Oman">Oman</option>
+                        <option value="Pakistan">Pakistan</option>
+                        <option value="Romania">Romania</option>
+                        <option value="Russia">Russia</option>
+                        <option value="Saudi Arabia">Saudi Arabia</option>
+                        <option value="Serbia">Serbia</option>
+                        <option value="Sierra Leone">Sierra Leone</option>
+                        <option value="South Africa">South Africa</option>
+                        <option value="Spain">Spain</option>
+                        <option value="Sri Lanka">Sri Lanka</option>
+                        <option value="Sweden">Sweden</option>
+                        <option value="Tonga">Tonga</option>
+                        <option value="Ukraine">Ukraine</option>
+                        <option value="United Arab Emirates">United Arab Emirates</option>
+                        <option value="United Kingdom">United Kingdom</option>
+                        <option value="United States">United States</option>
+                        <option value="Vietnam">Vietnam</option>
+                    </select>
+            
+                    <!-- Relation -->
+                    <label for="relation">Relation:</label>
+                    <select name="relation" required>
+                        <option value="" disabled selected>Select</option>
+                        <option value="Self">Self</option>
+                        <option value="Others">Others</option>
+                    </select>
+            
+                    <!-- Austim -->
+                    <label for="austim">Whether an immediate family member has been diagnosed with autism?</label>
+                    <select name="austim" required>
+                        <option value="" disabled selected>Select</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+            
+                    <label for="result">Score for AQ1-10 screening test:</label>
+                    <input type="number" name="result" step="any" required>
+            
+                    <!-- Used App Before -->
+                    <label for="used_app_before">Used Screening App Before:</label>
+                    <select name="used_app_before" required>
+                        <option value="" disabled selected>Select</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+            
+            </div>
+            
+
+
+
+            <!-- Submit -->
+
+            <div class="bottom">
+                {% if prediction_text %}
+                <div class="result">
+                    <h2>{{ prediction_text }}</h2>
+                </div>
+                {% else %}
+                <button type="submit">Predict</button>
+                {% endif %}
+            </div>
+
+
+        </div>
+    </form>
+</body>
+
+</html>
