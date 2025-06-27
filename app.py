@@ -6,7 +6,7 @@ app = Flask(__name__)
 app.secret_key = 'your_secret_key'  # Needed for session
 
 # Load model and encoders
-model = pickle.load(open("model.pkl", "rb"))
+model = pickle.load(open("best_model.pkl", "rb"))
 encoders = pickle.load(open("encoders.pkl", "rb"))
 
 @app.route('/')
